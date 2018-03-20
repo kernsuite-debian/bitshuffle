@@ -1,0 +1,30 @@
+Source: bitshuffle
+Section: python
+Priority: optional
+Maintainer: KERN packaging <packaging@kernsuite.info>
+Build-Depends: debhelper (>=9),
+               dh-python,
+               python-all,
+               python-setuptools,
+               python3-all,
+	       python-numpy,
+               python3-numpy
+Standards-Version: 3.9.8
+Homepage: https://pypi.python.org/pypi/bitshuffle/
+X-Python-Version: >= 2.6
+
+Package: python-bitshuffle
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
+Description: filter for improving typed data compression.
+ Algorithm that rearranges typed, binary data for improving compression,
+ as well as a python/C package that implements this algorithm within the
+ Numpy framework.
+
+Package: python3-bitshuffle
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, ${shlibs:Depends}
+Description: filter for improving typed data compression.
+ Algorithm that rearranges typed, binary data for improving compression,
+ as well as a python/C package that implements this algorithm within the
+ Numpy framework.

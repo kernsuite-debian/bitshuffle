@@ -1,0 +1,252 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: bitshuffle
+Source: https://pypi.python.org/pypi/bitshuffle/
+
+Files:     debian/*
+Copyright: 2018 Gijs Molenaar <gijs@pythonic.nl>
+License:   MIT
+
+Files:     MANIFEST.in
+           PKG-INFO
+           README.rst
+           bitshuffle.egg-info/PKG-INFO
+           bitshuffle.egg-info/SOURCES.txt
+           bitshuffle.egg-info/dependency_links.txt
+           bitshuffle.egg-info/requires.txt
+           bitshuffle.egg-info/top_level.txt
+           bitshuffle/__init__.py
+           bitshuffle/ext.c
+           bitshuffle/ext.pyx
+           bitshuffle/h5.c
+           bitshuffle/h5.pyx
+           bitshuffle/tests/__init__.py
+           bitshuffle/tests/data/regression_0.1.3.h5
+           bitshuffle/tests/make_regression_tdata.py
+           bitshuffle/tests/test_ext.py
+           bitshuffle/tests/test_h5filter.py
+           bitshuffle/tests/test_h5plugin.py
+           bitshuffle/tests/test_regression.py
+           requirements.txt
+           setup.cfg
+           setup.cfg.example
+           setup.py
+Copyright: __NO_COPYRIGHT_NOR_LICENSE__
+License:   __NO_COPYRIGHT_NOR_LICENSE__
+
+Files:     src/bitshuffle.c
+           src/bitshuffle_core.c
+           src/bitshuffle_internals.h
+           src/bshuf_h5filter.c
+           src/bshuf_h5plugin.c
+           src/iochain.c
+           src/lzf_h5plugin.c
+Copyright: __NO_COPYRIGHT__ in: src/bitshuffle.c
+           __NO_COPYRIGHT__ in: src/bitshuffle_core.c
+           __NO_COPYRIGHT__ in: src/bitshuffle_internals.h
+           __NO_COPYRIGHT__ in: src/bshuf_h5filter.c
+           __NO_COPYRIGHT__ in: src/bshuf_h5plugin.c
+           __NO_COPYRIGHT__ in: src/iochain.c
+           __NO_COPYRIGHT__ in: src/lzf_h5plugin.c
+License:   __UNKNOWN__
+ See LICENSE file for details about copyright and rights to use.
+
+Files:     lzf/lzf/lzf.h
+           lzf/lzf/lzfP.h
+           lzf/lzf/lzf_c.c
+           lzf/lzf/lzf_d.c
+Copyright: 2000-2008 Marc Alexander Lehmann <schmorp@schmorp.de>
+License:   BSD-2-Clause
+ Redistribution and use in source and binary forms, with or without modifica-
+ tion, are permitted provided that the following conditions are met:
+ .
+ 1.  Redistributions of source code must retain the above copyright notice,
+ this list of conditions and the following disclaimer.
+ .
+ 2.  Redistributions in binary form must reproduce the above copyright
+ notice, this list of conditions and the following disclaimer in the
+ documentation and/or other materials provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MER-
+ CHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+ EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPE-
+ CIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+ OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTH-
+ ERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE.
+ .
+ Alternatively, the contents of this file may be used under the terms of
+ the GNU General Public License ("GPL") version 2 or any later version,
+ in which case the provisions of the GPL are applicable instead of
+ the above. If you wish to allow the use of your version of this file
+ only under the terms of the GPL and not to allow others to use your
+ version of this file under the BSD license, indicate your decision
+ by deleting the provisions above and replace them with the notice
+ and other provisions required by the GPL. If you do not delete the
+ provisions above, a recipient may use your version of this file under
+ either the BSD or the GPL.
+
+Files:     src/bitshuffle.h
+           src/bitshuffle_core.h
+Copyright: __NO_COPYRIGHT__ in: src/bitshuffle.h
+           __NO_COPYRIGHT__ in: src/bitshuffle_core.h
+License:   __UNKNOWN__
+ See LICENSE file for details about copyright and rights to use.
+ .
+ Header File
+
+Files:     lzf/lzf_filter.h
+Copyright: 2008 Andrew Collette http://h5py.alfven.org License: BSD  (See LICENSE.txt for full license)
+License:   __UNKNOWN__
+ $Date$
+ .
+ End preamble block
+
+Files:     src/iochain.h
+Copyright: __NO_COPYRIGHT__ in: src/iochain.h
+License:   __UNKNOWN__
+ See LICENSE file for details about copyright and rights to use.
+ .
+ Header File
+ .
+ Similar in concept to a queue. Each task includes reading an input
+ and writing output, but the location of the input/output (the pointers)
+ depend on the previous item in the chain.
+ .
+ This is designed for parallelizing blocked compression/decompression IO,
+ where the destination of a compressed block depends on the compressed size
+ of all previous blocks.
+ .
+ Implemented with OpenMP locks.
+ .
+ Usage
+
+Files:     src/bshuf_h5filter.h
+Copyright: __NO_COPYRIGHT__ in: src/bshuf_h5filter.h
+License:   __UNKNOWN__
+ See LICENSE file for details about copyright and rights to use.
+ .
+ Header File
+ .
+ Filter Options
+
+Files:     lzf/example.c
+Copyright: 2009 Andrew Collette http://h5py.alfven.org License: BSD (see LICENSE.txt)
+License:   __UNKNOWN__
+ Example program demonstrating use of the LZF filter from C code.
+ .
+ To compile this program:
+
+Files:     lzf/lzf_filter.c
+Copyright: 2008 Andrew Collette http://h5py.alfven.org License: BSD  (See LICENSE.txt for full license)
+License:   __UNKNOWN__
+ $Date$
+ .
+ End preamble block
+ .
+ Implements an LZF filter module for HDF5, using the BSD-licensed library
+ by Marc Alexander Lehmann (http://www.goof.com/pcg/marc/liblzf.html).
+ .
+ No Python-specific code is used.  The filter behaves like the DEFLATE
+ filter, in that it is called for every type and space, and returns 0
+ if the data cannot be compressed.
+
+Files:     lz4/lz4.c
+Copyright: 2011-2015 Yann Collet.
+License:   BSD-2-Clause
+ BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ .
+ * Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above
+ copyright notice, this list of conditions and the following disclaimer
+ in the documentation and/or other materials provided with the
+ distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ .
+ You can contact the author at :
+ - LZ4 source repository : https://github.com/Cyan4973/lz4
+ - LZ4 public forum : https://groups.google.com/forum/#!forum/lz4c
+ .
+ Tuning parameters
+ .
+ HEAPMODE :
+ Select how default compression functions will allocate memory for their hash table,
+ in memory stack (0:default, fastest), or in memory heap (1:requires malloc()).
+
+Files:     lz4/lz4.h
+Copyright: 2011-2015 Yann Collet.
+License:   BSD-2-Clause
+ BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are
+ met:
+ .
+ * Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above
+ copyright notice, this list of conditions and the following disclaimer
+ in the documentation and/or other materials provided with the
+ distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ .
+ You can contact the author at :
+ - LZ4 source repository : https://github.com/Cyan4973/lz4
+ - LZ4 public forum : https://groups.google.com/forum/#!forum/lz4c
+
+#----------------------------------------------------------------------------
+# Files marked as NO_LICENSE_TEXT_FOUND may be covered by the following
+# license/copyright files.
+
+#----------------------------------------------------------------------------
+# License file: LICENSE
+ Bitshuffle - Filter for improving compression of typed binary data.
+ .
+ Copyright (c) 2014 Kiyoshi Masui (kiyo@physics.ubc.ca)
+ .
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
