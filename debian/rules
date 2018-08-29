@@ -3,7 +3,7 @@
 export PYBUILD_INSTALL_ARGS=--h5plugin --h5plugin-dir=debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/hdf5/plugins
 
 %:
-	dh $@ --with python2,python3 --buildsystem=pybuild
+	dh $@ --with python2,python3 --buildsystem=pybuild --parallel
 
 override_dh_python2:
 	dh_python2
