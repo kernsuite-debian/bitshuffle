@@ -1,3 +1,10 @@
+bitshuffle (0.3.4-1kern2) bionic; urgency=medium
+
+  [ Gijs Molenaar ]
+  * enable hdf5 plugin
+
+ -- KERN packaging <packaging@kernsuite.info>  Wed, 29 Aug 2018 23:15:29 +0200
+
 bitshuffle (0.3.4-1kern1) bionic; urgency=low
 
   * Initial release. 
