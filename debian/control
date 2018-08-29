@@ -15,24 +15,33 @@ Build-Depends: debhelper (>=9),
  libpython-dev,
  libpython3-dev,
  libhdf5-dev,
- pkg-config,
- gcc
+ hdf5-tools,
+ pkg-config
 Standards-Version: 3.9.8
 Homepage: https://pypi.python.org/pypi/bitshuffle/
 X-Python-Version: >= 2.6
 
+Package: bitshuffle-hdf5-plugin
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: filter for improving typed data compression (HDF5 plugin)
+ Algorithm that rearranges typed, binary data for improving compression,
+ as well as a python/C package that implements this algorithm within the
+ Numpy framework.
+
+
 Package: python-bitshuffle
-Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
-Description: filter for improving typed data compression.
+Architecture: any
+Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}, bitshuffle-hdf5-plugin
+Description: filter for improving typed data compression. (Python 2)
  Algorithm that rearranges typed, binary data for improving compression,
  as well as a python/C package that implements this algorithm within the
  Numpy framework.
 
 Package: python3-bitshuffle
-Architecture: all
-Depends: ${misc:Depends}, ${python3:Depends}, ${shlibs:Depends}
-Description: filter for improving typed data compression.
+Architecture: any
+Depends: ${misc:Depends}, ${python3:Depends}, ${shlibs:Depends}, bitshuffle-hdf5-plugin
+Description: filter for improving typed data compression. (Python 3)
  Algorithm that rearranges typed, binary data for improving compression,
  as well as a python/C package that implements this algorithm within the
  Numpy framework.

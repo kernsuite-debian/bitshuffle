@@ -7,3 +7,4 @@ files
 python-bitshuffle/
 python3-bitshuffle/
 tmp/
+bitshuffle-hdf5-plugin/
