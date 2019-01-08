@@ -1,3 +1,11 @@
+bitshuffle (0.3.5-1) bionic; urgency=medium
+
+  [ Gijs Molenaar ]
+  * update watch
+  * New upstream version 0.3.5
+
+ -- KERN packaging <packaging@kernsuite.info>  Tue, 08 Jan 2019 11:37:22 +0200
+
 bitshuffle (0.3.4-1kern2) bionic; urgency=medium
 
   [ Gijs Molenaar ]
