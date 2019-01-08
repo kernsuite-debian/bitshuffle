@@ -1,1 +1,3 @@
 version=3
+opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/bitshuffle-$1\.tar\.gz/ \
+  https://github.com/kiyo-masui/bitshuffle/tags .*/v?(\d\S*)\.tar\.gz
